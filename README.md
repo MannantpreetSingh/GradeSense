@@ -8,6 +8,6 @@ A student performance prediction project using Machine Learning.
 - Simple animated UI
 
 ## Tech Used
-- Python (later)
+- Python 
 - Flask (coming soon)
 - HTML/CSS
