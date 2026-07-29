@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GradeSense</title>
+
+    <style>
+        body {
+            background-color: bisque;
+            font-family: Arial, sans-serif;
+        }
+
+
+        @keyframes fadeSlide {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            text-align: center;
+            animation: fadeSlide 2.0s ease-out;
+        }
+
+        .form-box {
+            width: 320px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgb(253, 255, 254);
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+
+            animation: fadeSlide 1s ease;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #6c63ff;
+            box-shadow: 0 0 6px rgba(108, 99, 255, 0.5);
+            outline: none;
+        }
+
+        
+        label {
+            font-weight: bold;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #6c63ff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background: #5548d9;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.97);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Student Result Predictor </h1>
+
+    <div class="form-box">
+        <form method="post">
+
+            <label>Study Hours</label>
+            <input type="number" name="hours" required>
+
+            <label>Attendance (%)</label>
+            <input type="number" name="attendance" required>
+
+            <label>Marks</label>
+            <input type="number" name="marks" required>
+
+            <button type="submit">Predict</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
