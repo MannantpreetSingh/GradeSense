@@ -9,5 +9,5 @@ A student performance prediction project using Machine Learning.
 
 ## Tech Used
 - Python 
-- Flask (coming soon)
+- Flask 
 - HTML/CSS
