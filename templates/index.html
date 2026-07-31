@@ -83,13 +83,12 @@
 </head>
 
 <body>
-
     <h1>Student Result Predictor </h1>
 
     <div class="form-box">
-        <form action="/predict" method="post">
+        <form action="/predict" method="POST">
 
-            <label>Study Hours</label>
+            <label> Hours</label>
             <input type="number" name="hours" required>
 
             <label>Attendance (%)</label>
@@ -101,6 +100,18 @@
             <button type="submit">Predict</button>
 
         </form>
+{% if prediction is not none %}
+<div style="margin-top:20px; padding:15px; background:#f2f2f2; border-radius:10px;">
+    <h2>Prediction: {{ prediction }}</h2>
+    <h3>Grade: {{ GRADE }}</h3>
+</div>
+{% endif %}
+{% if prediction is  none %}
+<div style="margin-top:20px; padding:15px; background:#f2f2f2; border-radius:10px;">
+    <h2>Prediction: {{ prediction }}</h2>
+    <h3>Grade: {{ GRADE }}</h3>
+</div>
+{% endif %}
     </div>
 
 </body>
