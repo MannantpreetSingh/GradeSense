@@ -16,8 +16,11 @@ def predict():
     attendance = float(request.form["attendance"])
     marks = float(request.form["marks"])
 
-    prediction = model.predict([[hours, attendance, marks]])[0]
-
+    prediction = model.predict([[hours, attendance, marks]])
+    if prediction[0]==1:
+        result=  " pass" 
+    else:
+        result="fail "
     if marks >= 90:
         GRADE = 'A'
     elif marks >= 75:
@@ -29,10 +32,9 @@ def predict():
 
     return render_template(
     "index.html",
-    prediction=prediction,
+    prediction=result,
     GRADE=GRADE
 )
 
-
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()

@@ -15,5 +15,9 @@ print("prediction :",y_prediction)
 print("Accuracy:", accuracy_score(y_test, y_prediction))
 print("sample predicton",y_prediction[:6])
 print("Actual value",y_test.values[:6])
-pickle.dump(model, open("model.pkl", "rb"))
+if y_prediction==[1]:
+    print(" you will pass the exam ")
+else:
+    print("you will fail ")    
+pickle.dump(model, open("model.pkl", "wb"))
 print("Model saved successfully!")
