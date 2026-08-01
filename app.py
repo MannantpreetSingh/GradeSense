@@ -17,13 +17,14 @@ def predict():
     marks = float(request.form["marks"])
 
     prediction = model.predict([[hours, attendance, marks]])
+    score = (hours * 2) + (attendance * 0.5) + (marks * 1)
     if prediction[0]==1:
         result=  " pass" 
     else:
         result="fail "
-    if marks >= 90:
+    if score >= 150:
         GRADE = 'A'
-    elif marks >= 75:
+    elif marks >= 100:
         GRADE = 'B'
     elif marks >= 65:
         GRADE = 'C'
